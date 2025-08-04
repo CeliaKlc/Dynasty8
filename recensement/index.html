@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GTA Immobilier</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Lightbox Zoom CSS */
+    .lightbox {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    .lightbox::after {
+      content: '✖';
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: white;
+      font-size: 30px;
+      cursor: pointer;
+    }
+    .modal {
+  display: none;
+  position: fixed;
+  z-index: 1500;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 800px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.slider-lightbox {
+  display: none;
+  position: fixed;
+  z-index: 2000; /* plus que la modale (1500) */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.slider-lightbox.active {
+  display: flex;
+}
+
+.slider-content {
+  position: relative;
+  text-align: center;
+}
+
+.slider-content img {
+  max-width: 90vw;
+  max-height: 80vh;
+  border-radius: 10px;
+}
+
+.slider-content .nav {
+  margin-top: 10px;
+}
+
+.slider-content .close {
+  position: absolute;
+  top: -1px;
+  right: 13px;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Recensement Immobilier - Dynasty 8</h1>
+    <nav>
+      <button onclick="switchCategory('villas')">🏠 Villas</button>
+      <button onclick="switchCategory('garages')">🚗 Garages Non Liés</button>
+      <button onclick="switchCategory('zones')">💎 Zones de Luxe</button>
+    </nav>
+  </header>
+
+  <section id="filters"></section>
+  <section id="results"></section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Agrandissement">
+  </div>
+
+    <!-- Lightbox Slider -->
+    <div id="sliderLightbox" class="slider-lightbox">
+        <div class="slider-content">
+            <span class="close" onclick="closeSlider()">✖</span>
+            <img id="sliderImage" src="" alt="Photo" />
+        <div class="nav">
+            <button onclick="prevPhoto()">←</button>
+            <button onclick="nextPhoto()">→</button>
+        </div>
+        </div>
+    </div>
+
+    <div id="detailsModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal" onclick="closeDetailsModal()">✖</span>
+        <div id="modalDetails"></div>
+      </div>
+    </div>
+
+
+  <script src="js/main.js"></script>
+  <script>
+    // Fonction pour ouvrir la lightbox
+  let currentPhotos = [];
+  let currentIndex = 0;
+
+  function openSlider(photos, index) {
+    currentPhotos = photos;
+    currentIndex = index;
+    updateSliderImage();
+    document.getElementById('sliderLightbox').classList.add('active');
+  }
+
+  function updateSliderImage() {
+    const sliderImage = document.getElementById('sliderImage');
+    sliderImage.src = currentPhotos[currentIndex];
+  }
+
+  function nextPhoto() {
+    if (currentIndex < currentPhotos.length - 1) {
+      currentIndex++;
+    } else {
+      currentIndex = 0; // boucle
+    }
+    updateSliderImage();
+  }
+
+  function prevPhoto() {
+    if (currentIndex > 0) {
+      currentIndex--;
+    } else {
+      currentIndex = currentPhotos.length - 1;
+    }
+    updateSliderImage();
+  }
+
+  function closeSlider() {
+    document.getElementById('sliderLightbox').classList.remove('active');
+  }
+
+  // Délégation d’événement : clic sur image pour ouvrir le slider
+// Permet aussi d’ouvrir le slider depuis la modale
+document.addEventListener('click', (e) => {
+  if (e.target.tagName === 'IMG' && e.target.closest('.image-grid')) {
+    const imgElements = [...e.target.closest('.image-grid').querySelectorAll('img')];
+    const srcList = imgElements.map(img => img.src);
+    const clickedIndex = imgElements.indexOf(e.target);
+    openSlider(srcList, clickedIndex);
+  }
+});
+</script>
+
+</body>
+</html>

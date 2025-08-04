@@ -1,0 +1,420 @@
+/* ------ GLOBAL ------ */
+body {
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #121212;
+  color: #e0e0e0;
+}
+
+header {
+  background: #1f8b4c;
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+nav button {
+  background: #2a2a2a;
+  color: #f9b233;
+  border: 2px solid #f9b233;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+}
+
+nav button:hover {
+  background: #f9b233;
+  color: #000;
+}
+
+/* ------ SECTIONS ------ */
+#filters, #results {
+  padding: 5px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+#filters h2 {
+  margin-bottom: 15px;
+}
+
+#filters {
+  background: #1e1e1e;
+  color: #e0e0e0;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+  margin: 20px auto;
+}
+
+/* ------ FILTER ELEMENTS ------ */
+#filters label,
+#filters select,
+#filters input,
+#filters button {
+  margin: 10px 10px;
+  font-size: 16px;
+}
+
+#filters input[type="text"],
+#filters input[type="number"],
+#filters select {
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  color: #eee;
+}
+
+#filters input[type="text"]:focus,
+#filters input[type="number"]:focus,
+#filters select:focus {
+  border-color: #f9b233;
+  box-shadow: 0 0 0 3px rgba(249, 178, 51, 0.2);
+}
+
+/* ------ BOUTONS ------ */
+#filters button {
+  background-color: #f9b233;
+  color: #000;
+}
+#filters button:hover {
+  background-color: #e3910e;
+  color: #fff;
+}
+
+/* ------ GRID CARDS ------ */
+#results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+/* ------ INDIVIDUAL CARD ------ */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* Pour que toutes les cartes prennent la même hauteur */
+  position: relative;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.voir-plus-btn {
+  margin-top: auto;
+  padding: 10px;
+  background-color: #F9B233;
+  border: none;
+  border-radius: 0 0 8px 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+
+.voir-plus-btn:hover {
+  background-color: #e3910e;
+  color: #fff;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card-header {
+  background: #1f8b4c;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.card-header .tag {
+  background: #f9b233;
+  color: #222;
+  padding: 5px 10px;
+  font-size: 13px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.card.expanded {
+  max-height: 1000px;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #076633;
+}
+
+.card p {
+  margin: 8px 0;
+}
+
+.card .details {
+  margin-top: 10px;
+  flex-grow: 1;
+}
+
+.card.expanded .details {
+  display: block;
+  margin-top: 10px;
+}
+
+.card-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  padding: 10px;
+}
+
+.card-photos img {
+  width: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+  aspect-ratio: 4/3;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.card-photos img:hover {
+  transform: scale(1.05);
+}
+
+.card-main-info {
+  padding: 15px 20px;
+  background-color: #2a2a2a;
+  border-top: 1px solid #333;
+}
+
+.card-main-info p {
+  margin: 6px 0;
+  font-size: 15px;
+}
+
+.details {
+  padding: 15px 20px;
+  background-color: #2a2a2a;
+  border-top: 1px solid #333;
+  font-size: 14px;
+}
+
+.gps-preview {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.gps-preview img {
+  max-width: 100%;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* ------ PHOTOS GRID ------ */
+.card .photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.card .photos img {
+  width: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+  aspect-ratio: 4/3;
+}
+
+
+/* ------ EMPTY STATE ------ */
+#results .card {
+  align-self: start;
+}
+
+#results p {
+  font-style: italic;
+  text-align: center;
+  grid-column: 1 / -1;
+  color: #aaa;
+}
+
+/* ------ LIGHTBOX ZOOM + ANIMATION ------ */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox.active {
+  display: flex;
+  opacity: 1;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+.lightbox.active img {
+  transform: scale(1);
+}
+
+.lightbox::after {
+    content: 'X';
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* ===== SLIDER LIGHTBOX ===== */
+.slider-lightbox {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.slider-lightbox.active {
+  display: flex;
+}
+
+.slider-content {
+  position: relative;
+  text-align: center;
+}
+
+.slider-content img {
+  max-width: 90vw;
+  max-height: 80vh;
+  min-width: 400px;
+  min-height: 300px;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.slider-content .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 32px;
+  color: white;
+  cursor: pointer;
+}
+
+.slider-content .nav {
+  margin-top: 20px;
+}
+
+.slider-content .nav button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  background: #F9B233;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+/* ------ PHOTO HOVER ANIMATION ------ */
+.card .photos img,
+.card-photos img {
+  transition: transform 0.3s ease;
+  cursor: zoom-in;
+  border: 1px solid #333;
+}
+
+.card .photos img:hover {
+  transform: scale(1.05);
+}
+
+/* ------ UNIFORMISATION INPUTS / SELECT / CHECKBOX ------ */
+#filters input[type="text"],
+#filters input[type="number"],
+#filters select {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-size: 15px;
+}
+
+#filters input[type="text"]:focus,
+#filters input[type="number"]:focus,
+#filters select:focus {
+  border-color: #076633;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(7, 102, 51, 0.1);
+}
+
+/* ------ STYLING DES CHECKBOXES ------ */
+#filters input[type="checkbox"] {
+  accent-color: #076633;
+  transform: scale(1.2);
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+/* ------ BOUTON RECHERCHER STYLÉ ------ */
+#filters button {
+  background-color: #F9B233;
+  color: #222;
+  font-weight: 600;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#filters button:hover {
+  background-color: #e3910e;
+  color: #fff;
+}

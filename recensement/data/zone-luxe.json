@@ -1,0 +1,231 @@
+[
+  {
+    "adresse": "Del Perro - Marathon Avenue 31",
+    "garage": true,
+    "interieur": "Duplex",
+    "prix": "575000",
+    "F6": "Del Perro Height - Duplex 21/67",
+    "description": "",
+    "photos": ["duplex_ext_perro.png", "duplex_int_perro.png"],
+    "gps": ""
+  },
+  {
+    "adresse": "Del Perro - Boulevard Del Perro 2",
+    "garage": true,
+    "interieur": "Duplex",
+    "prix": "575000",
+    "F6": "Del Perro Height - Duplex 21/67",
+    "description": "",
+    "photos": ["", ""],
+    "gps": ""
+  },
+  {
+    "adresse": "Del Perro - Boulevard Del Perro 3",
+    "garage": true,
+    "interieur": "Duplex",
+    "prix": "575000",
+    "F6": "Del Perro Height - Duplex 21/67",
+    "description": "",
+    "photos": ["", ""],
+    "gps": ""
+  },
+  {
+    "adresse": "Rockford Hils - Mo Milton Drive South 6",
+    "garage": true,
+    "interieur": "Duplex",
+    "prix": "925000",
+    "F6": "Eclipse Towers Duplex 23/67",
+    "description": "",
+    "photos": ["", ""],
+    "gps": ""
+  },
+  {
+    "adresse": "Rockford Hils - Mo Milton Drive South 7",
+    "garage": true,
+    "interieur": "Duplex",
+    "prix": "925000",
+    "F6": "Eclipse Towers Duplex 23/67",
+    "description": "",
+    "photos": ["", ""],
+    "gps": ""
+  },
+  {
+    "adresse": "Vinewood West - Mo Milton Drive South 3",
+    "garage": true,
+    "interieur": "Duplex",
+    "prix": "925000",
+    "F6": "Eclipse Towers Duplex 23/67",
+    "description": "",
+    "photos": ["", ""],
+    "gps": ""
+  },
+  {
+    "adresse": "Vinewood West - Mo Milton Drive South 4",
+    "garage": true,
+    "interieur": "Duplex",
+    "prix": "925000",
+    "F6": "Eclipse Towers Duplex 23/67",
+    "description": "",
+    "photos": ["", ""],
+    "gps": ""
+  },
+  {
+    "adresse": "Pillbox Hill - Alta Street 5 North",
+    "garage": true,
+    "interieur": "Duplex",
+    "prix": "1245000",
+    "F6": "3 Alta Street Duplex North 1/67",
+    "description": "",
+    "photos": ["duplex_ext_pe.png", "duplex_int_pe_north.png"],
+    "gps": ""
+  },
+  {
+    "adresse": "Pillbox Hill - Alta Street 5 South",
+    "garage": true,
+    "interieur": "Duplex",
+    "prix": "1245000",
+    "F6": "3 Alta Street Duplex South 2/67",
+    "description": "",
+    "photos": ["duplex_ext_pe.png", "duplex_int_pe_south.png"],
+    "gps": ""
+  },
+  {
+    "adresse": "Pillbox Hill - Alta Street 9",
+    "garage": true,
+    "interieur": "Duplex",
+    "prix": "575000",
+    "F6": "4 integrity Way - Duplex 4/67",
+    "description": "",
+    "photos": ["", ""],
+    "gps": ""
+  },
+  {
+    "adresse": "Del Perro - Marathon Avenue 31",
+    "garage": true,
+    "interieur": "Appartement Moderne",
+    "prix": "600000",
+    "F6": "Del Perro Height - Appartement 20/67",
+    "description": "",
+    "photos": ["", ""],
+    "gps": ""
+  },
+  {
+    "adresse": "Rockford Hils - Heritage Way 1",
+    "garage": true,
+    "interieur": "Appartement Moderne",
+    "prix": "750000",
+    "F6": "Richards Majestic - Appartement 52/67",
+    "description": "",
+    "photos": ["", ""],
+    "gps": ""
+  },
+  {
+    "adresse": "Vinewood West - Boulevard Del Perro 1",
+    "garage": true,
+    "interieur": "Appartement Moderne",
+    "prix": "850000",
+    "F6": "Tinsel Tower - Appartement 55/67",
+    "description": "",
+    "photos": ["", ""],
+    "gps": ""
+  },
+  {
+    "adresse": "Pillbox Hill - Alta Street 9",
+    "garage": true,
+    "interieur": "Appartement Moderne",
+    "prix": "600000",
+    "F6": "4 integrity Way - Appartement 3/67",
+    "description": "",
+    "photos": ["", ""],
+    "gps": ""
+  },
+  {
+    "adresse": "Pillbox Hill - Alta Street 7",
+    "garage": true,
+    "interieur": "Appartement Moderne",
+    "prix": "600000",
+    "F6": "4 integrity Way - Appartement 3/67",
+    "description": "",
+    "photos": ["", ""],
+    "gps": ""
+  },
+  {
+    "adresse": "Rockford Hills - Mo Milton Drive South 6",
+    "garage": true,
+    "interieur": "Appartement Moderne",
+    "prix": "850000",
+    "F6": "Eclipse  Towers Moderne 24/67",
+    "description": "",
+    "photos": ["", ""],
+    "gps": ""
+  },
+  {
+    "adresse": "Rockford Hills - Mo Milton Drive South 7",
+    "garage": true,
+    "interieur": "Appartement Moderne",
+    "prix": "850000",
+    "F6": "Eclipse  Towers Moderne 24/67",
+    "photos": ["", ""],
+    "gps": ""
+  },
+    {
+    "adresse": "Rockford Hills - Mo Milton Drive South 6",
+    "garage": true,
+    "interieur": "Appartement de luxe",
+    "prix": "1000000",
+    "F6": "Eclipse Towers Nord 25/67",
+    "description": "Vue NORD",
+    "photos": ["", ""],
+    "gps": ""
+  },
+  {
+    "adresse": "Rockford Hills - Mo Milton Drive South 6",
+    "garage": true,
+    "interieur": "Appartement de luxe",
+    "prix": "1150000",
+    "F6": "Eclipse Towers Sud 26/67",
+    "description": "Vue SUD",
+    "photos": ["", ""],
+    "gps": ""
+  },
+  {
+    "adresse": "Rockford Hills - Mo Milton Drive South 7",
+    "garage": true,
+    "interieur": "Appartement de luxe",
+    "prix": "1000000",
+    "F6": "Eclipse Towers Nord 25/67",
+    "description": "Vue NORD",
+    "photos": ["", ""],
+    "gps": ""
+  },
+  {
+    "adresse": "Rockford Hills - Mo Milton Drive South 7",
+    "garage": true,
+    "interieur": "Appartement de luxe",
+    "prix": "1150000",
+    "F6": "Eclipse Towers Sud 26/67",
+    "description": "Vue SUD",
+    "photos": ["", ""],
+    "gps": ""
+  },
+  {
+    "adresse": "Vinewood West - Mo Milton Drive South 3",
+    "garage": true,
+    "interieur": "Appartement de luxe",
+    "prix": "1000000",
+    "F6": "Eclipse Towers Nord 25/67",
+    "description": "Vue NORD",
+    "photos": ["", ""],
+    "gps": ""
+  },
+    {
+    "adresse": "Vinewood West - Mo Milton Drive South 3",
+    "garage": true,
+    "interieur": "Appartement de luxe",
+    "prix": "1150000",
+    "F6": "Eclipse Towers Sud 26/67",
+    "description": "Vue SUD",
+    "photos": ["", ""],
+    "gps": ""
+  }
+]
