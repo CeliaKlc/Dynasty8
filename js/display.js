@@ -20,7 +20,7 @@ function displayResults(list) {
     card.innerHTML = `
       <div class="card-header">
         ${item.interieur ? `<span class="tag">${item.interieur}</span>` : ''}
-        ${item.prix ? `<span class="tag"><p><strong>Prix :</strong> $${parseInt(item.prix).toLocaleString()}</p></span>` : ''}
+        ${item.prix ? `<span class="tag"><p class="price"><strong>Prix :</strong> $${parseInt(item.prix).toLocaleString()}</p></span>` : ''}
       </div>
       <div class="card-main-info">
         <h3>${item.adresse}</h3>

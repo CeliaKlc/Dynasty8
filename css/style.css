@@ -222,6 +222,14 @@ nav button:hover {
   color: #aaa;
 }
 
+#results .price {
+  color: #272626;
+}
+
+h3 {
+  text-align: center;
+}
+
 /* ================= GPS IMAGE ================= */
 .gps-preview {
   margin-top: 10px;
