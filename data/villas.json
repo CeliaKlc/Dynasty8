@@ -41,7 +41,7 @@
     "terrasse": true,
     "piscine": true,
     "balcon": false,
-    "disponible": true,
+    "disponible": false,
     "info" : "",
     "photos": ["3Exterieur.png", "3Jardin.png"],
     "gps": "3GPS.png"
@@ -135,7 +135,7 @@
     "prixgarage": "265000",
     "jardin": false,
     "terrasse": false,
-    "piscine": true,
+    "piscine": false,
     "balcon": true,
     "disponible": true,
     "info" : "Vu sur la ville (parking)",
@@ -557,5 +557,21 @@
     "info" : "Vue villa avoisinante et bas de la ville ",
     "photos": ["35Exterieur.png", "35Jardin.png"],
     "gps": "35GPS.png"
+  }
+  ,
+  {
+    "adresse": "Vinewood Hills - Sheldon Avenue North 24",
+    "interieur": "Rouge",
+    "prix": "4650000",
+    "garage": "10 places",
+    "prixgarage": "730000",
+    "jardin": false,
+    "terrasse": true,
+    "piscine": true,
+    "balcon": true,
+    "disponible": true,
+    "info" : "2 balcons",
+    "photos": ["36Exterieur.png", "36Jardin.png", "36JardinBis.png"],
+    "gps": "36GPS.png"
   }
 ]
