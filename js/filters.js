@@ -8,22 +8,23 @@ function renderFilters(category) {
       <label><input type="checkbox" id="piscine"> Piscine</label>
       <label><input type="checkbox" id="balcon"> Balcon</label>
       <label><input type="checkbox" id="jardin"> Jardin</label>
-      <label>Intérieur :
-        <select id="interieur">
-          <option value="">--</option>
-          <option value="rouge">Rouge</option>
-          <option value="blanc">Blanc</option>
-          <option value="simple">Maison Simple</option>
-       </select>
-      </label>
-      <label>Garage :
-        <select id="garage">
-          <option value="">--</option>
-          <option value="2">2 places</option>
-          <option value="6">6 places</option>
-          <option value="10">10 places</option>
-        </select>
-      </label>
+
+      <fieldset id="interieur-filters">
+        <legend>Intérieur :</legend>
+        <label class="pill"><input type="checkbox" name="interieur" value="rouge"> Rouge</label>
+        <label class="pill"><input type="checkbox" name="interieur" value="blanc"> Blanc</label>
+        <label class="pill"><input type="checkbox" name="interieur" value="maison simple"> Maison Simple</label>
+        <label class="pill"><input type="checkbox" name="interieur" value="maison de luxe"> Maison de luxe</label>
+        <label class="pill"><input type="checkbox" name="interieur" value="villa de luxe"> Villa de luxe</label>
+      </fieldset>
+
+      <fieldset id="garage-filters">
+        <legend>Garage :</legend>
+        <label class="pill"><input type="checkbox" name="garage" value="2"> 2 places</label>
+        <label class="pill"><input type="checkbox" name="garage" value="6"> 6 places</label>
+        <label class="pill"><input type="checkbox" name="garage" value="10"> 10 places</label>
+      </fieldset>
+
       <input type="number" id="prix" placeholder="Prix maximum (optionnel)">
       <button id="recherche" onclick="filterVillas()">Rechercher</button>
     `;
@@ -64,8 +65,13 @@ const filterVillas = async () => {
   const piscine = document.getElementById('piscine').checked;
   const balcon = document.getElementById('balcon').checked;
   const jardin = document.getElementById('jardin').checked;
-  const garage = document.getElementById('garage').value;
-  const interieur = document.getElementById('interieur').value;
+
+  const interieurs = Array.from(document.querySelectorAll('input[name="interieur"]:checked'))
+  .map(cb => cb.value);
+
+  const garages = Array.from(document.querySelectorAll('input[name="garage"]:checked'))
+  .map(cb => cb.value);
+
   const prix = document.getElementById('prix').value;
 
   const res = await fetch('data/villas.json');
@@ -75,8 +81,12 @@ const filterVillas = async () => {
     (!piscine || v.piscine) &&
     (!balcon || v.balcon) &&
     (!jardin || v.jardin) &&
-    (!interieur || (v.interieur && v.interieur.toLowerCase().includes(interieur.toLowerCase()))) &&
-    (!garage || (v.garage && v.garage.includes(garage))) &&
+    (interieurs.length === 0 || (v.interieur && interieurs.some(val =>
+      v.interieur.toLowerCase().includes(val.toLowerCase())
+    ))) &&
+    (garages.length === 0 || (v.garage && garages.some(val =>
+      v.garage.toString().includes(val)
+    ))) &&
     (!prix || (v.prix && parseInt(v.prix) <= parseInt(prix)))
   );
 

@@ -241,3 +241,25 @@ h3 {
   border-radius: 8px;
   border: 1px solid #ddd;
 }
+
+/* ================= FILTERS ================= */
+
+.pill {
+  display: inline-block;
+  background: #2a2a2a;
+  color: #f9b233;
+  padding: 8px 15px;
+  border-radius: 50px;
+  cursor: pointer;
+  margin: 5px;
+  border: 2px solid #f9b233;
+  user-select: none;
+  transition: 0.3s;
+}
+.pill input {
+  display: none;
+}
+.pill:has(input:checked) {
+  background: #f9b233;
+  color: #000;
+}
