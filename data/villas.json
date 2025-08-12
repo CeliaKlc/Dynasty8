@@ -217,7 +217,7 @@
     "terrasse": true,
     "piscine": true,
     "balcon": false,
-    "disponible": true,
+    "disponible": false,
     "info" : "Fausse piscine",
     "photos": ["13Exterieur.png", "13Jardin.png"],
     "gps": "13GPS.png"
@@ -553,7 +553,7 @@
     "terrasse": true,
     "piscine": true,
     "balcon": true,
-    "disponible": true,
+    "disponible": false,
     "info" : "2 balcons",
     "photos": ["36Exterieur.png", "36Jardin.png", "36JardinBis.png"],
     "gps": "36GPS.png"
