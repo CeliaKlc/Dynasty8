@@ -78,6 +78,7 @@ const filterVillas = async () => {
   const villas = await res.json();
 
   const filtered = villas.filter(v =>
+    v.disponible === true &&
     (!piscine || v.piscine) &&
     (!balcon || v.balcon) &&
     (!jardin || v.jardin) &&
