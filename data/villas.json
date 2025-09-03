@@ -23,7 +23,7 @@
     "prixgarage": "730000",
     "jardin": true,
     "piscine": true,
-    "disponible": true,
+    "disponible": false,
     "terrasse": true,
     "balcon": true,
     "info" : "Pas de vue sur la ville, jardin muré",
@@ -641,7 +641,7 @@
   ,
   {
     "adresse": "Vinewood Hills - Cockingend Drive 11",
-    "interieur": "Villa de Luxe",
+    "interieur": "Maison de Luxe",
     "prix": "16250000",
     "garage": "10 places",
     "prixgarage": "2150000",
@@ -705,7 +705,7 @@
   ,
   {
     "adresse": "Vinewood Hills - Rockford Drive North 2",
-    "interieur": "Villa de Luxe",
+    "interieur": "Maison de Luxe",
     "prix": "14750000",
     "garage": "10 places",
     "prixgarage": "2150000",
@@ -957,5 +957,37 @@
     "info" : "atroce",
     "photos": ["60Exterieur.png", "60Jardin.png"],
     "gps": "60GPS.png"
+  }
+  ,
+  {
+    "adresse": "Vinewood Hills - Sheldon Avenue North 26",
+    "interieur": "Maison Simple",
+    "prix": "1500000",
+    "garage": "2 places",
+    "prixgarage": "89500",
+    "jardin": false,
+    "terrasse": true,
+    "piscine": true,
+    "balcon": false,
+    "disponible": false,
+    "info" : "",
+    "photos": ["61Exterieur.png", "61Jardin.png"],
+    "gps": "61GPS.png"
+  }
+  ,
+  {
+    "adresse": "Vinewood Hills - Mo Milton Drive South 11",
+    "interieur": "Rouge",
+    "prix": "1500000",
+    "garage": "2 places",
+    "prixgarage": "89500",
+    "jardin": false,
+    "terrasse": true,
+    "piscine": true,
+    "balcon": false,
+    "disponible": false,
+    "info" : "",
+    "photos": ["61Exterieur.png", "61Jardin.png"],
+    "gps": "61GPS.png"
   }
 ]
