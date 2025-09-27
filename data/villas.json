@@ -990,4 +990,20 @@
     "photos": ["61Exterieur.png", "61Jardin.png"],
     "gps": "61GPS.png"
   }
+  ,
+  {
+    "adresse": "Vinewood Hills - Milton Road 5",
+    "interieur": "Blanc",
+    "prix": "4375000",
+    "garage": "6 places",
+    "prixgarage": "265000",
+    "jardin": true,
+    "terrasse": true,
+    "piscine": true,
+    "balcon": true,
+    "disponible": true,
+    "info" : "",
+    "photos": ["62Exterieur.png", "62Jardin.png", "62Balcon.png"],
+    "gps": "62GPS.png"
+  }
 ]
